@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-authors-table
+      author: Anton Stareiko
+      changes:
+        - createTable:
+            tableName: authors
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

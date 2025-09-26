@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-books-table
+      author: Anton Stareiko
+      changes:
+        - createTable:
+            tableName: books
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

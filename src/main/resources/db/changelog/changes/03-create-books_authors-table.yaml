@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-books_authors-table
+      author: Anton Stareiko
+      changes:
+        - createTable:
+            tableName: books_authors
+            columns:
+              - column:
+                  name: book_id
+                  type: bigint
+              - column:
+                  name: author_id
+                  type: bigint

@@ -1,0 +1,5 @@
+type Mutation {
+    createBook(createDto: CreateBookDto!): BookDto
+    updateBook(updateDto: UpdateBookDto!): BookDto
+    deleteBook(id: Int): Boolean
+}

@@ -9,12 +9,14 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import java.util.Set;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "authors")
+@NoArgsConstructor
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,4 +25,8 @@ public class Author {
     private String name;
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books;
+
+    public Author(Long id) {
+        this.id = id;
+    }
 }

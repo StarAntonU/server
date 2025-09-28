@@ -43,7 +43,10 @@ public class BookServiceImpl implements BookService {
     @Override
     public List<BookDto> getAll() {
         List<Book> books = bookRepository.findAll();
-        return books.stream().map(bookMapper::toDto).toList();
+        return books
+                .stream()
+                .map(bookMapper::toDto)
+                .toList();
     }
 
     private Book findBookById(Long bookId) {

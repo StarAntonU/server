@@ -1,0 +1,15 @@
+input CreateAuthorDto {
+    name: String!
+    booksId: [Int]
+}
+
+input UpdateAuthorDto {
+    id: Int!
+    name: String!
+}
+
+type AuthorDto {
+    id: ID!
+    name: String!
+    booksId: [Int]
+}

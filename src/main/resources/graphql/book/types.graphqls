@@ -1,6 +1,6 @@
 input CreateBookDto {
     title: String!
-    authors: [Int]
+    authorsId: [Int]
 }
 
 input UpdateBookDto {

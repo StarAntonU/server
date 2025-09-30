@@ -20,7 +20,7 @@ public interface BookMapper {
 
     @AfterMapping
     default void setAuthors(@MappingTarget Book book, CreateBookDto createDto) {
-        Set<Author> authors = createDto.authors()
+        Set<Author> authors = createDto.getAuthorsId()
                 .stream()
                 .map(Author::new)
                 .collect(Collectors.toSet());

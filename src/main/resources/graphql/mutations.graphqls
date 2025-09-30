@@ -1,9 +1,9 @@
 type Mutation {
     createBook(createDto: CreateBookDto!): BookDto
     updateBook(updateDto: UpdateBookDto!): BookDto
-    deleteBook(id: Int): Boolean
+    deleteBook(id: Int!): Boolean
 
     createAuthor(createDto: CreateAuthorDto!): AuthorDto
     updateAuthor(updateDto: UpdateAuthorDto!): AuthorDto
-    deleteAuthor(id: Int): Boolean
+    deleteAuthor(id: Int!): Boolean
 }

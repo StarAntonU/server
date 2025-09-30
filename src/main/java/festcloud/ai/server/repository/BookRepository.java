@@ -14,4 +14,6 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     @EntityGraph(attributePaths = "authors")
     List<Book> findAll();
+
+    Boolean existsByTitle(String title);
 }

@@ -71,7 +71,7 @@ public class AuthorServiceImpl implements AuthorService {
 
     private Author getAuthorById(Long id) {
         return authorRepository.findById(id).orElseThrow(
-                () -> new EntityNotFindException("Can`t find the Author by id" + id)
+                () -> new EntityNotFindException("Can`t find the Author by id " + id)
         );
     }
 
